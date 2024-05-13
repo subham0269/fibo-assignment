@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Tick from '@/public/tick.svg';
 
-export default function TodaysWorkoutItem ({taskname, col, imageUrl}) {
+export default function TodaysWorkoutItem ({taskname, col, imageUrl}:{taskname:any, col: any, imageUrl: any}) {
    console.log(col);
    
    return (
