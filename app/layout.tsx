@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import BottomNav from "./ui/BottomNav";
+import { DMSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${DMSans.className} max-w-[360px] mx-auto`}>
+        <div className="bg-[#242424] min-h-dvh py-7 px-4">{children}</div>
+        <div><BottomNav/></div>
+      </body>
     </html>
   );
 }
